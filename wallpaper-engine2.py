@@ -6,12 +6,10 @@ from random import *
 
 try:
     interval = int(sys.argv[1])
-    while True:
-        if interval <= 0:
-            print("Please type in a number greate than 0\n")
-            continue
-        else:
-            break
+    if interval <= 0:
+        print("Please type in a number greater than 0")    
+        raise ValueError
+
 except:
     print("Type in an update interval (in sec)")
     while True:
